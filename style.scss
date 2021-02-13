@@ -7,6 +7,31 @@ body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
 }
+input,
+button {
+  padding: 0.7rem;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+.buy {
+  font-weight: bold;
+  color: #fff;
+}
+.red-btn {
+  background-color: #ea5468;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #e42b44;
+  }
+}
+.red-btn,
+img[src="./img/like.svg"] {
+  cursor: pointer;
+}
 header {
   width: 100vw;
   height: 100vh;
@@ -15,18 +40,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  .buy {
-    font-weight: bold;
-    color: #fff;
-  }
-  .red-btn {
-    background-color: #ea5468;
-    color: #fff;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      background-color: #e42b44;
-    }
-  }
   span,
   button {
     cursor: pointer;
@@ -94,14 +107,7 @@ header {
       align-items: center;
       justify-content: center;
       margin-top: 0.7rem;
-      input,
-      button {
-        padding: 0.7rem;
-        border: none;
-        &:focus {
-          outline: none;
-        }
-      }
+
       input {
         flex: 1;
         position: relative;
@@ -118,7 +124,7 @@ header {
   }
   footer {
     align-self: center;
-    transform: translate(0, -160%);
+    transform: translate(0, -120%);
     &,
     div {
       display: flex;
@@ -133,13 +139,13 @@ header {
       }
       span {
         font-size: 0.9rem;
+        padding: 0.2rem 0;
         color: rgb(189, 187, 187);
-        /* font-weight: lighter; */
         cursor: default;
       }
       span:first-child {
         color: #fff;
-        font-size: 1.6rem;
+        font-size: 1.7rem;
       }
     }
   }
@@ -154,28 +160,52 @@ main {
   & > h4 {
     padding: 3rem 0 1.5rem 0;
     text-align: center;
-    font-weight: lighter;
     font-size: 1.2rem;
     flex-basis: 100%;
+  }
+  h4 {
+    color: #2d4042;
   }
   .card {
     flex-basis: 300px;
     margin: 1rem;
     box-shadow: 0px 0px 10px rgba(131, 131, 131, 0.555);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.07);
+    }
     img {
       width: 100%;
       height: auto;
       object-fit: cover;
     }
     .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      padding: 0.5rem;
+      &,
+      & > * {
+        width: 100%;
+        margin: 0.3rem 0;
+      }
+      & > div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+      }
+      button {
+        padding: 0.3rem;
+        margin-bottom: 0;
+      }
       img {
-        width: 20px;
+        width: 16px;
       }
       h4 {
         font-weight: bold;
+      }
+      p {
+        font-size: 0.9rem;
+        font-weight: lighter;
       }
     }
   }
