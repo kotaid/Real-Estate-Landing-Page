@@ -10,6 +10,38 @@ body {
   overflow-x: hidden;
 }
 
+input,
+button {
+  padding: 0.7rem;
+  border: none;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.buy {
+  font-weight: bold;
+  color: #fff;
+}
+
+.red-btn {
+  background-color: #ea5468;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.red-btn:hover {
+  background-color: #e42b44;
+}
+
+.red-btn,
+img[src="./img/like.svg"] {
+  cursor: pointer;
+}
+
 header {
   width: 100vw;
   height: 100vh;
@@ -25,22 +57,6 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-header .buy {
-  font-weight: bold;
-  color: #fff;
-}
-
-header .red-btn {
-  background-color: #ea5468;
-  color: #fff;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-header .red-btn:hover {
-  background-color: #e42b44;
 }
 
 header span,
@@ -143,17 +159,6 @@ header #search form {
   margin-top: 0.7rem;
 }
 
-header #search form input,
-header #search form button {
-  padding: 0.7rem;
-  border: none;
-}
-
-header #search form input:focus,
-header #search form button:focus {
-  outline: none;
-}
-
 header #search form input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -175,8 +180,8 @@ header footer {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-transform: translate(0, -160%);
-          transform: translate(0, -160%);
+  -webkit-transform: translate(0, -120%);
+          transform: translate(0, -120%);
 }
 
 header footer,
@@ -206,14 +211,14 @@ header footer div:not(div:last-child) {
 
 header footer div span {
   font-size: 0.9rem;
+  padding: 0.2rem 0;
   color: #bdbbbb;
-  /* font-weight: lighter; */
   cursor: default;
 }
 
 header footer div span:first-child {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
 }
 
 main {
@@ -234,10 +239,13 @@ main {
 main > h4 {
   padding: 3rem 0 1.5rem 0;
   text-align: center;
-  font-weight: lighter;
   font-size: 1.2rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+}
+
+main h4 {
+  color: #2d4042;
 }
 
 main .card {
@@ -246,6 +254,13 @@ main .card {
   margin: 1rem;
   -webkit-box-shadow: 0px 0px 10px rgba(131, 131, 131, 0.555);
           box-shadow: 0px 0px 10px rgba(131, 131, 131, 0.555);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main .card:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 main .card img {
@@ -256,6 +271,20 @@ main .card img {
 }
 
 main .card .card-footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+}
+
+main .card .card-footer,
+main .card .card-footer > * {
+  width: 100%;
+  margin: 0.3rem 0;
+}
+
+main .card .card-footer > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,13 +294,24 @@ main .card .card-footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0;
+}
+
+main .card .card-footer button {
+  padding: 0.3rem;
+  margin-bottom: 0;
 }
 
 main .card .card-footer img {
-  width: 20px;
+  width: 16px;
 }
 
 main .card .card-footer h4 {
   font-weight: bold;
+}
+
+main .card .card-footer p {
+  font-size: 0.9rem;
+  font-weight: lighter;
 }
 /*# sourceMappingURL=style.css.map */
